@@ -1,24 +1,9 @@
 import React from "react";
-import { Container, ProcessBox, Title } from "./style";
-import entradaicon from "../../assets/img/entradaicon.png";
-import saidaicon from "../../assets/img/saidaicon.png";
-import arquivadosicon from "../../assets/img/arquivadosicon.png";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { Container, ProcessBox, Title, ProcessoModel } from "./style";
+import bgImg from "../../assets/img/uefa.png";
 
+const CaixadeSaida = () => {
 
-
-const HomePage = () => {
-  const history = useHistory();
-
-  const goToEntrada = () => {
-    history.push('/entrada');
-  }
-  const goToSaida = () => {
-    history.push('/saida');
-  }
-  const goToArquivados = () => {
-    history.push('/arquivados');
-  }
   // const [eventos, setEventos] = useState([]);
   // const [user, setUser] = useState([]);
   // const [eventoOrg, setEventoOrg] = useState([])
@@ -78,20 +63,36 @@ const HomePage = () => {
     //     {/* </div> */}
     // </Container>
     <Container>
-      <ProcessBox onClick={goToEntrada} backgroundImg={entradaicon}>
-        <Title>ENTRADA</Title>
-      </ProcessBox>
-      <ProcessBox onClick={goToSaida} backgroundImg={saidaicon}>
-        <Title>SAÍDA</Title>
-      </ProcessBox>
-      <ProcessBox onClick={goToArquivados} backgroundImg={arquivadosicon}>
-        <Title>ARQUIVADOS</Title>
-      </ProcessBox>
+      <ProcessoModel backgroundImg={bgImg}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <h1>
+            3º
+          </h1>
+          <div>
+            <h2 style={{ color: 'white' }}>
+              titulo
+            </h2>
+          </div>
+        </div>
+      </ProcessoModel>
+      <ProcessoModel backgroundImg={bgImg}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <h1>
+            7º
+          </h1>
+          <div>
+            <h2 style={{ color: 'white' }}>
+              titulo
+            </h2>
+          </div>
+        </div>
+      </ProcessoModel>
     </Container>
+
 
 
 
   )
 }
 
-export default HomePage;
+export default CaixadeSaida;
